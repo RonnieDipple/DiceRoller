@@ -2,18 +2,20 @@ package com.example.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    lateinit var diceImage: ImageView
+    lateinit var rollButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        diceImage = findViewById(R.id.dice_image)
 
-        val rollButton: Button = findViewById(R.id.roll_button)
-
-
+        rollButton = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
 
     }
